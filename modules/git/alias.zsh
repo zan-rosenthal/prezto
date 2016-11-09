@@ -31,8 +31,9 @@ alias g='git'
 
 # Branch (b)
 alias gb='git branch'
+alias gbl='git branch --list'
 alias gbc='git checkout -b'
-alias gbl='git branch -v'
+alias gbv='git branch -v'
 alias gbL='git branch -av'
 alias gbx='git branch -d'
 alias gbX='git branch -D'
@@ -48,7 +49,7 @@ alias gcm='git commit --message'
 alias gco='git checkout'
 alias gcO='git checkout --patch'
 alias gcf='git commit --amend --reuse-message HEAD'
-alias gcF='git commit --verbose --amend'
+alias gca='git commit --verbose --amend'
 alias gcp='git cherry-pick --ff'
 alias gcP='git cherry-pick --no-commit'
 alias gcr='git revert'
@@ -98,6 +99,7 @@ alias gir='git reset'
 alias giR='git reset --patch'
 alias gix='git rm -r --cached'
 alias giX='git rm -rf --cached'
+alias gds='git diff --staged'
 
 # Log (l)
 alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
@@ -117,11 +119,11 @@ alias gmt='git mergetool'
 
 # Push (p)
 alias gp='git push'
-alias gpf='git push --force'
+alias gpf='git push --force-with-lease origin "$(git-branch-current 2> /dev/null)"'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'
 alias gpt='git push --tags'
-alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
+alias gpc='git push origin "$(git-branch-current 2> /dev/null)"'
 alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
 
 # Rebase (r)

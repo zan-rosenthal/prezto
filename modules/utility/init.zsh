@@ -91,6 +91,7 @@ else
 fi
 
 alias l='ls -1A'         # Lists in one column, hidden files.
+alias lsa='ls -a'      # List all, including hidden
 alias ll='ls -lh'        # Lists human readable sizes.
 alias lr='ll -R'         # Lists human readable sizes, recursively.
 alias la='ll -A'         # Lists human readable sizes, hidden files.
@@ -101,6 +102,13 @@ alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 alias sl='ls'            # I often screw this up.
+
+#open applications
+alias postgres='open -a Postgres'
+alias typora='open -a Typora'
+alias spotify='open -a Spotify'
+alias notes='typora ~/Code/thinkCERCA.md'
+alias aliases='atom  ~/.zprezto/modules/utility/init.zsh'
 
 # Grep
 if zstyle -t ':prezto:module:utility:grep' color; then
@@ -198,3 +206,5 @@ function find-exec {
 function psu {
   ps -U "${1:-$LOGNAME}" -o 'pid,%cpu,%mem,command' "${(@)argv[2,-1]}"
 }
+
+
