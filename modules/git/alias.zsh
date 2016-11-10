@@ -32,7 +32,7 @@ alias g='git'
 # Branch (b)
 alias gb='git branch'
 alias gbl='git branch --list'
-alias gbc='git checkout -b'
+alias gcb='git checkout -b'
 alias gbv='git branch -v'
 alias gbL='git branch -av'
 alias gbx='git branch -d'
@@ -76,9 +76,9 @@ alias gdk='git ls-files --killed'
 alias gdi='git status --porcelain --short --ignored | sed -n "s/^!! //p"'
 
 # Fetch (f)
-alias gf='git fetch'
-alias gfc='git clone'
-alias gfm='git pull'
+alias fetch='git fetch'
+alias clone='git clone'
+alias pull='git pull'
 alias gfr='git pull --rebase'
 
 # Grep (g)
@@ -90,7 +90,7 @@ alias ggv='git grep --invert-match'
 alias ggw='git grep --word-regexp'
 
 # Index (i)
-alias gia='git add'
+alias ga='git add'
 alias giA='git add --patch'
 alias giu='git add --update'
 alias gid='git diff --no-ext-diff --cached'
@@ -118,7 +118,7 @@ alias gma='git merge --abort'
 alias gmt='git mergetool'
 
 # Push (p)
-alias gp='git push'
+alias push='git push'
 alias gpf='git push --force-with-lease origin "$(git-branch-current 2> /dev/null)"'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'
@@ -127,7 +127,7 @@ alias gpc='git push origin "$(git-branch-current 2> /dev/null)"'
 alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
 
 # Rebase (r)
-alias gr='git rebase'
+alias rebase='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
@@ -145,7 +145,7 @@ alias gRs='git remote show'
 alias gRb='git-hub-browse'
 
 # Stash (s)
-alias gs='git stash'
+alias stash='git stash'
 alias gsa='git stash apply'
 alias gsx='git stash drop'
 alias gsX='git-stash-clear-interactive'
@@ -171,6 +171,7 @@ alias gSu='git submodule foreach git pull origin master'
 alias gSx='git-submodule-remove'
 
 # Working Copy (w)
+alias gs='git status'
 alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwd='git diff --no-ext-diff'
